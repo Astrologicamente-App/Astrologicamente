@@ -1,6 +1,7 @@
 import random
 from openai import OpenAI
 import json
+import os
 
 bichos = [
     "Abelha", "Anta",
@@ -80,7 +81,7 @@ def escolhe_bicho(data_nascimento):
 
 
 def request_mensagem_do_dia(data_nascimento):
-    client = OpenAI(api_key="api-key")  # Substitua 'sua_chave_de_api_aqui' pela sua chave de API da OpenAI
+    client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))  # Substitua 'sua_chave_de_api_aqui' pela sua chave de API da OpenAI
 
     model_engine = "gpt-3.5-turbo-0125"
 

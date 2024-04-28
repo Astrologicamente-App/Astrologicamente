@@ -1,4 +1,4 @@
-from API.mensagem_do_dia import request_mensagem_do_dia, escolhe_bicho
+from mensagem_do_dia import request_mensagem_do_dia, escolhe_bicho
 from flask import Flask, jsonify, request
 
 
